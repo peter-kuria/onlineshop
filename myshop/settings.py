@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
+    'coupons.apps.CouponsConfig',
 ]
 
 MIDDLEWARE = [
@@ -131,7 +132,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 CART_SESSION_ID = 'cart'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'petermbaik@gmail.com'
+EMAIL_HOST_PASSWORD = '30269490'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 
 # Braintree settings
